@@ -1,3 +1,5 @@
+import 'package:first_app/widgets/card_produto.dart';
+import 'package:first_app/widgets/container_propaganda.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -31,17 +33,13 @@ class Dashboard extends StatelessWidget {
             ),
           ),
         ),
-        Container(
-            child: Row(
-          children: [
-            Text('Container')
-          ],
-        )),
-        Text('Ofertas'),
-        Text('Cards de frutas'),
-        Text('Mais vendidos'),
-        Text('Cards de Frutas'),
+        ContainerPropaganda(),
+        Text('exclusive Offer'),
+        CardProduto(),
+        //Text('Mais vendidos'),
+        //Text('Cards de Frutas'),
       ]),
     );
   }
 }
+
