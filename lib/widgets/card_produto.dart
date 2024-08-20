@@ -1,69 +1,73 @@
 import 'package:flutter/material.dart';
 
 class CardProduto extends StatelessWidget {
-  const CardProduto({
-    super.key,
-  });
+  const CardProduto({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 350.0,
-      width: 300.0,
+      width: 150,
+      height: 250,
+      margin: const EdgeInsets.all(6.0),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          width: 2.0,
-          color: Colors.black,
-        ),
-      ),
+          border: Border.all(
+            color: const Color.fromARGB(255, 206, 203, 203),
+          ),
+          borderRadius: BorderRadius.circular(15)),
       child: Column(
         children: [
-          Image.asset('images/banana.png'),
-          Text(
-            'Organic Bananas',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 20.0,
-              fontWeight: FontWeight.bold,
+          const SizedBox(
+            height: 10,
+          ),
+          Expanded(
+            child: Image.network(
+              'https://images.pexels.com/photos/5966630/pexels-photo-5966630.jpeg',
+              fit: BoxFit.contain,
             ),
           ),
-          const Text(
-            'Bananas for kg',
-            style: TextStyle(
-              color: Colors.grey,
-              fontSize: 16.0,
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            child: Text(
+              'Organic Bananas',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 12,
+              ),
             ),
           ),
-          Row(
-            children: [
-              Positioned(
-                right: 30,
-                top: 10,
-                child: Text(
-                  'RS 6.00',
+          const Text('***'),
+          Padding(
+            padding: const EdgeInsets.all(12.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  "R\$4.77",
                   style: TextStyle(
-                    fontSize: 20.0,
                     fontWeight: FontWeight.bold,
+                    fontSize: 14,
                   ),
                 ),
-              ),
-              Positioned(
-                right: 20.0,
-                child: Container(
-                    width: 25.0,
-                    height: 25.0,
-                    decoration: BoxDecoration(
-                      color: Colors.green,
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: Icon(
+                Container(
+                  width: 40,
+                  height: 40,
+                  //  margin: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                      color: const Color.fromARGB(255, 61, 184, 98),
+                      borderRadius: BorderRadius.circular(15)),
+                  child: IconButton(
+                    iconSize: 20,
+                    padding: EdgeInsets.zero,
+                    onPressed: () {},
+                    icon: const Icon(
                       Icons.add,
                       color: Colors.white,
-                    )),
-              ),
-            ],
-          ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
     );

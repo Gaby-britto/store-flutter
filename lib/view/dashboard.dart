@@ -35,7 +35,13 @@ class Dashboard extends StatelessWidget {
         ),
         ContainerPropaganda(),
         Text('exclusive Offer'),
-        CardProduto(),
+         const Row(
+            children: [
+              CardProduto(),
+              CardProduto(),
+              CardProduto(),
+            ],
+          ),
         //Text('Mais vendidos'),
         //Text('Cards de Frutas'),
       ]),
